@@ -16,5 +16,5 @@ An interactive, multimodal machine learning application that identifies iconic a
 
 ## 👥 The Engineering Team
 * **Heba Syed** 
-* **Madiha Khan** 
+* **Madeeha Khan** 
 * **Samaah Abdullah** 
