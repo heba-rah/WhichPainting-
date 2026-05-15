@@ -20,6 +20,19 @@ st.sidebar.write("**Accuracy:** 90.53%")
 st.sidebar.write("**Framework:** Custom NumPy Inference (No Scikit-learn)")
 st.sidebar.write("**Constraints:** < 10MB Model Size")
 
+st.subheader("The Three Masterpieces")
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.image("starry_night.jpg", caption="Painting A")
+with col2:
+    st.image("persistence.jpg", caption="Painting B")
+with col3:
+    st.image("water_lilies.jpg", caption="Painting C")
+
+st.info("Pick one of the paintings above in your mind, then fill out the survey below. Let's see if the model can guess which one you chose!")
+
+
 with st.form("survey_form"):
     st.subheader("The Subjective Survey")
     
