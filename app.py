@@ -96,4 +96,18 @@ with right_panel:
             temp_filename = "temp_input.csv"
             pd.DataFrame(input_data).to_csv(temp_filename, index=False)
 
-            with st.spinner
+            with st.spinner("Running Matrix Multiplications..."):
+                try:
+                    prediction = predict_all(temp_filename)[0]
+                    
+                    st.balloons()
+                    st.write("---")
+                    st.success(f"### 🎉 The AI Guesses: **{prediction}**")
+                    
+                    if prediction in PAINTING_IMAGES:
+                        st.image(PAINTING_IMAGES[prediction], caption=f"Match Found: {prediction}", width=400)
+                except Exception as e:
+                    st.error(f"Inference pipeline crash: {e}")
+                finally:
+                    if os.path.exists(temp_filename):
+                        os.remove(temp_filename)
