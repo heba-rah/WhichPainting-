@@ -58,7 +58,7 @@ st.markdown("""
         margin-bottom: 24px;
     }
     </style>
-""", unsafe_allow_value=True)
+""", unsafe_allow_html=True)
 
 PAINTING_IMAGES = {
     "The Starry Night": "starry_night.jpg",
