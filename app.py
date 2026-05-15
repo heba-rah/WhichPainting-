@@ -95,16 +95,19 @@ with right_panel:
 
     # Interactive Input Container
     with st.container(border=True):
-        # We use st.markdown labels for the forms to force the crisp 18px font sizing right above inputs
-        st.markdown("<p style='font-size: 18px; font-weight: bold; margin-bottom: -10px;'>① Describe how this painting makes you feel using adjectives</p>", unsafe_allow_html=True)
+        # Question 1
+        st.markdown("<p style='font-size: 20px; font-weight: bold; margin-bottom: -10px;'><span style='color: #FFB347;'>1.</span> Describe how this painting makes you feel using adjectives</p>", unsafe_allow_html=True)
         vibe = st.text_area("", placeholder="e.g., cold, swirly, melancholic...", key="vibe_input")
         
-        st.markdown("<p style='font-size: 18px; font-weight: bold; margin-bottom: -10px;'>② If this painting was a food, what would it be?</p>", unsafe_allow_html=True)
+        # Question 2
+        st.markdown("<p style='font-size: 20px; font-weight: bold; margin-bottom: -10px;'><span style='color: #FFB347;'>2.</span> If this painting was a food, what would it be?</p>", unsafe_allow_html=True)
         food = st.text_input("", placeholder="e.g., black coffee, melted cheese...", key="food_input")
         
-        st.markdown("<p style='font-size: 18px; font-weight: bold; margin-bottom: -10px;'>③ Imagine a soundtrack for this painting. Describe it without naming objects.</p>", unsafe_allow_html=True)
+        # Question 3
+        st.markdown("<p style='font-size: 20px; font-weight: bold; margin-bottom: -10px;'><span style='color: #FFB347;'>3.</span> Imagine a soundtrack for this painting. Describe it without naming objects.</p>", unsafe_allow_html=True)
         soundtrack = st.text_area("", placeholder="e.g., low cello notes with a chaotic tempo...", key="soundtrack_input")
         
+        # Slider
         st.markdown("<p style='font-size: 18px; font-weight: bold; margin-bottom: 5px;'>Rate emotional intensity when looking at this painting (1-10, 1 being least, 10 being most)</p>", unsafe_allow_html=True)
         intensity = st.slider("", 1, 10, 5, key="intensity_slider")
         
