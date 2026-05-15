@@ -50,7 +50,7 @@ with left_panel:
     
     st.write("---")
     
-    # 3. Meet The Team
+# 3. Meet The Team
     st.header("👥 MEET THE TEAM")
     st.markdown("""
     <div style="font-size: 18px; line-height: 1.6; margin-bottom: 15px;">
@@ -58,16 +58,16 @@ with left_panel:
     </div>
     """, unsafe_allow_html=True)
     
-    # Clean avatar columns matching your sketch layout with bumped font sizes
+    # Clean avatar columns using your uploaded images instead of emojis
     team_col1, team_col2, team_col3 = st.columns(3)
     with team_col1:
-        st.markdown("<div style='text-align: center; font-size: 40px;'>👤</div>", unsafe_allow_html=True)
+        st.image("heba.png", use_container_width=True)
         st.markdown("<p style='text-align: center; font-size: 16px; font-weight: bold;'>Heba Syed</p>", unsafe_allow_html=True)
     with team_col2:
-        st.markdown("<div style='text-align: center; font-size: 40px;'>👤</div>", unsafe_allow_html=True)
+        st.image("madeeha.png", use_container_width=True)
         st.markdown("<p style='text-align: center; font-size: 16px; font-weight: bold;'>Madiha Khan</p>", unsafe_allow_html=True)
     with team_col3:
-        st.markdown("<div style='text-align: center; font-size: 40px;'>👤</div>", unsafe_allow_html=True)
+        st.image("samaah.png", use_container_width=True)
         st.markdown("<p style='text-align: center; font-size: 16px; font-weight: bold;'>Samaah Abdullah</p>", unsafe_allow_html=True)
 
 
